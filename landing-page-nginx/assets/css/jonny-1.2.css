@@ -1,0 +1,179 @@
+/**
+ * Jonny
+ * https://www.21tools.it
+ *
+ */
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Reset css
+2. General
+3. Left informations
+4. Buttons
+5. Social networks
+6. Bootstrap overrides
+7. Form 
+8. ContactMe overrides
+9. Media queries
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[1. Reset css]
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1;}
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none;}
+table {border-collapse:collapse;border-spacing:0;}
+
+* {font-family:Helvetica,Arial,Sans-serif;font-weight:200;color:#000;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+html, body {margin:0;padding:0;border:0;}
+strong, b{font-weight:700;}
+a:hover, a:focus, a:active, a:hover *, a:focus *, a:active * {outline:none;text-decoration:none;}
+a {-webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out;-ms-transition:all 0.4s ease-out;-o-transition:all 0.4s ease-out;transition:all 0.4s ease-out;cursor:pointer;text-decoration:none;color:inherit;}
+input {line-height:normal;}
+input, textarea, select {-webkit-appearance:none;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;}
+textarea {vertical-align:top;}
+input:focus, select:focus, textarea:focus {outline:none;}
+
+/*------------------------------------------------------------------
+[2. General]
+*/
+html {height:100%;}
+body {background:#FFF;min-height:100%;height:100%;overflow-x:hidden;}
+.gallery-items {display:none;}
+.j-hide {display:none;}
+
+.jonny {background:#FFF;display:table;width:100%;min-height:100%;height:1px;text-align:center;}
+.jonny > div {overflow:hidden;display:table-cell;vertical-align:top;height:0;}
+
+/*------------------------------------------------------------------
+[3. Left informations]
+*/
+.jonny .infos {width:66%;position:relative;}
+.jonny .infos > img {position:absolute;top:0;left:50%;height:100%;width:auto;-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);-ms-transform:translateX(-50%);-o-transform:translateX(-50%);transform:translateX(-50%);z-index:5;}
+.jonny .infos > .videoCover {position:absolute;top:0;left:0;height:100%;width:100%;background:#000;z-index:5;}
+.jonny .infos > .videoCover iframe {position:absolute;top:0;width:100%;height:100%;}
+.jonny .infos .contain {position:relative;z-index:10;width:100%;height:100%;display:table;}
+.jonny .infos .contain > div {display:table;width:100%;height:100%;padding:50px 40px;box-sizing:border-box;background:rgba(0,0,0,0.3);}
+.jonny .infos .contain > div > div {display:table-cell;vertical-align:middle;width:100%;height:auto;}
+.jonny .infos .logo {max-height:34px;max-width:100%;}
+.jonny .infos .title {margin-top:20px;font-family:'Montserrat',sans-serif;font-size:70px;line-height:66px;font-weight:800;color:#FFF;word-break:break-word;}
+.jonny .infos .description {margin:10px auto 0 auto;display:block;width:70%;font-size:14px;line-height:14px;color:#FFF;word-break:break-word;}
+.jonny .infos .countdown {margin-top:10px;font-size:0;}
+.jonny .infos .countdown > div {display:inline-block;margin-top:20px;text-align:center;}
+.jonny .infos .countdown > div > div {width:90px;height:90px;margin:0 10px;font-size:44px;line-height:39px;font-weight:600;padding:23px 0;box-sizing:border-box;text-align:center;color:#FFF;border:solid 4px #FFF;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;}
+.jonny .infos .countdown > div > span {display:block;margin-top:6px;font-size:14px;line-height:14px;font-weight:600;color:#FFF;}
+.jonny .infos .address {display:block;margin-top:50px;padding-top:36px;font-size:20px;line-height:20px;font-weight:bold;color:#FFF;word-break:break-word;background-repeat:no-repeat;background-size:30px 30px;background-position:top center;background-image:url(../imgs/pin.png);}
+
+/*------------------------------------------------------------------
+[4. Buttons]
+*/
+.buttons {font-size:0;text-align:left;}
+.buttons.centered {text-align:center;}
+.jonny .infos .buttons {margin-top:40px;}
+.buttons > a {display:inline-block;margin:10px 10px 0 10px;box-sizing:border-box;font-size:14px;line-height:14px;font-weight:bold;color:#FFF;text-align:center;padding:13px 20px;min-width:140px;border:solid 1px #FFF;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;}
+.buttons > a:hover {opacity:0.9;}
+.buttons > a.icon {padding-left:46px;background-repeat:no-repeat;background-size:26px 26px;background-position:left 14px center;}
+.buttons > a.icon-pic {background-image:url(../imgs/icon/pic.png);}
+.buttons > a.icon-mail {background-image:url(../imgs/icon/mail.png);}
+.buttons > a.icon-download {background-image:url(../imgs/icon/download.png);}
+.buttons > a.icon-book {background-image:url(../imgs/icon/book.png);}
+.buttons > a.icon-info {background-image:url(../imgs/icon/info.png);}
+.buttons > a.icon-user {background-image:url(../imgs/icon/user.png);}
+.buttons > a.icon-link {background-image:url(../imgs/icon/link.png);}
+.buttons > a.icon-share {background-image:url(../imgs/icon/share.png);}
+.buttons > a.icon-star {background-image:url(../imgs/icon/star.png);}
+.buttons > a.icon-shop {background-image:url(../imgs/icon/shop.png);}
+.buttons > a.icon-video {background-image:url(../imgs/icon/video.png);}
+.buttons > a.icon-audio {background-image:url(../imgs/icon/audio.png);}
+.buttons > a.sky-blue {background-color:#3F9FFF;border-color:#3F9FFF;}
+.buttons > a.light-green {background-color:#00D466;border-color:#00D466;}
+.buttons > a.black {background-color:#111111;border-color:#111111;}
+.buttons > a.light-orange {background-color:#E99C4D;border-color:#E99C4D;}
+.buttons > a.strong-orange {background-color:#E86D4B;border-color:#E86D4B;}
+.buttons > a.dark-green {background-color:#295E4F;border-color:#295E4F;}
+.buttons > a.blue-navy {background-color:#22315E;border-color:#22315E;}
+.buttons > a.blue-ocean {background-color:#324AAE;border-color:#324AAE;}
+.buttons > a.pink {background-color:#E57A9F;border-color:#E57A9F;}
+.buttons > a.green-moss {background-color:#5E8E7C;border-color:#5E8E7C;}
+.buttons > a.red {background-color:#E65644;border-color:#E65644;}
+.buttons > a.old-purple {background-color:#4A374E;border-color:#4A374E;}
+
+/*------------------------------------------------------------------
+[5. Social networks]
+*/
+.jonny .infos .social {margin-top:50px;font-size:0;}
+.jonny .infos .social > a {display:inline-block;width:40px;height:40px;margin:5px;border:solid 3px #FFF;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;background-repeat:no-repeat;background-size:26px 26px;background-position:center center;}
+.jonny .infos .social > a.facebook {background-image:url(../imgs/social/facebook.png);}
+.jonny .infos .social > a.messenger {background-image:url(../imgs/social/messenger.png);}
+.jonny .infos .social > a.whatsapp {background-image:url(../imgs/social/whatsapp.png);}
+.jonny .infos .social > a.instagram {background-image:url(../imgs/social/instagram.png);}
+.jonny .infos .social > a.twitter {background-image:url(../imgs/social/twitter.png);}
+.jonny .infos .social > a.youtube {background-image:url(../imgs/social/youtube.png);}
+.jonny .infos .social > a.snapchat {background-image:url(../imgs/social/snapchat.png);}
+.jonny .infos .social > a.spotify {background-image:url(../imgs/social/spotify.png);}
+
+/*------------------------------------------------------------------
+[6. Bootstrap overrides]
+*/
+/* Modal */
+.customModal .modal-content {padding-bottom:40px;border:none;overflow:hidden;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}
+.customModal .modal-content .fit-width {width:100%;height:auto;}
+.customModal .modal-content img {margin:0 0 15px 0;}
+.customModal .modal-content h3 {margin:40px;padding:0;font-family:Montserrat,sans-serif;font-size:30px;line-height:30px;font-weight:800;color:#000;}
+.customModal .modal-content p {margin:0 40px 15px 40px;padding:0;font-size:14px;line-height:16px;color:#000;}
+.customModal .modal-content .marginTop {margin-top:40px;}
+/* Popover */
+.popover .popover-content {text-align:center;}
+.popover .popover-content .j-hide {display:block;}
+
+/*------------------------------------------------------------------
+[7. Form]
+*/
+.jonny .form {width:34%;min-width:340px;}
+.jonny .form > div {display:table;width:100%;height:100%;padding:50px 20px;box-sizing:border-box;}
+.jonny .form > div > div {display:table-cell;vertical-align:middle;width:100%;height:auto;}
+.jonny .form > div > div > h3 {font-family:'Montserrat',sans-serif;font-weight:800;font-size:30px;line-height:30px;margin-bottom:30px;}
+.jonny .form > div > div > h3 > span {color:#2ECC71;font-family:inherit;font-weight:inherit;font-size:inherit;line-height:inherit;}
+
+/*------------------------------------------------------------------
+[8. ContactMe overrides]
+*/
+.contactMe .btn {width:100% !important;background:#2ECC71 !important;-moz-border-radius:4px !important;-webkit-border-radius:4px !important;border-radius:4px !important;-moz-box-shadow:0 3px 0 0 #029A43;-webkit-box-shadow:0 3px 0 0 #029A43;box-shadow:0 3px 0 0 #029A43;}
+
+/*------------------------------------------------------------------
+[9. Media queries]
+*/
+@media only screen and (max-width:1049px) {
+	.jonny .infos .title {margin-top:50px;font-size:40px;line-height:36px;}
+}
+@media only screen and (max-width:767px) {
+	.jonny {display:block;}
+	.jonny .infos {display:table;width:100%;min-height:100%;}
+	.jonny .infos .contain {display:table-cell;}
+	.jonny .infos .title {margin-top:50px;font-size:36px;line-height:32px;}
+	.jonny .form {display:block;width:100%;height:auto;min-width:250px;}
+	.jonny .form > div {display:block;}
+	.jonny .form > div > div {display:block;}
+}
+@media only screen and (max-width:449px) {
+	.jonny .infos .description {width:100%;}
+}
